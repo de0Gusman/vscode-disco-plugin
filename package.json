@@ -1,0 +1,28 @@
+{
+  "name": "vscode-disco-plugin",
+  "displayName": "Disco Mode",
+  "description": "Activate disco mode and start Run on F5",
+  "version": "1.0.0",
+  "publisher": "yourname",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:workbench.action.debug.start",
+    "onCommand:vscode-disco-plugin.runAndDisco"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vscode-disco-plugin.runAndDisco",
+        "title": "Run and Activate Disco Mode"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.78.0",
+    "typescript": "^5.0.0"
+  }
+}
